@@ -48,12 +48,14 @@ module.exports = {
         ]
     },
     plugins: [
-        new CopyWebpackPlugin([
-            // copy over json / png files in root of /lib to /build
-            {from:'lib/', to:'lib/', noErrorOnMissing: true},
-            // include if you want index.html / styles.css in the root of project folder and copied to /build
-            {from:'html/index.html', to:'index.html'},
-            {from:'html/styles.css', to:'styles.css'}
-        ])
+        new CopyWebpackPlugin({
+            patterns: [
+                // copy over json / png files in root of /lib to /build
+                {from:'lib/', to:'lib/', noErrorOnMissing: true},
+                // include if you want index.html / styles.css in the root of project folder and copied to /build
+                {from:'html/index.html', to:'index.html'},
+                {from:'html/styles.css', to:'styles.css'}
+            ]
+        })
     ]
 };
