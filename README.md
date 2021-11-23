@@ -13,4 +13,4 @@ In the project directory, to run your game:
 
 ### `npm run game`
 
-Spins up a local server that hosts your game. Run your game in a browser by hitting http://localhost:5005
+Spins up a local server that hosts your game. Run your game in a browser by hitting http://localhost:3000

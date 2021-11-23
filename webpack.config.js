@@ -19,7 +19,7 @@ module.exports = {
         contentBase: path.join(__dirname, "build"),
         writeToDisk: true,
         watchContentBase: true,
-        port:5005
+        port:3000
     },
     resolve: {
         extensions: [".tsx", ".ts", ".js"],
@@ -50,10 +50,10 @@ module.exports = {
     plugins: [
         new CopyWebpackPlugin([
             // copy over json / png files in root of /lib to /build
-            {from:'lib/', to:'lib/'},
+            {from:'lib/', to:'lib/', noErrorOnMissing: true},
             // include if you want index.html / styles.css in the root of project folder and copied to /build
             {from:'html/index.html', to:'index.html'},
             {from:'html/styles.css', to:'styles.css'}
-        ]), 
+        ])
     ]
 };
