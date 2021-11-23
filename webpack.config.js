@@ -16,10 +16,15 @@ module.exports = {
     devtool: 'nosources-source-map',
     // setup webpack-dev-server
     devServer: {
-        contentBase: path.join(__dirname, "build"),
-        writeToDisk: true,
-        watchContentBase: true,
-        port:3000
+        static: {
+            directory: path.join(__dirname, "build"),
+        },
+        devMiddleware: {
+            // so the /build folder is actually added to the project folder when run
+            writeToDisk: true
+        },
+        compress: true,
+        port: 3000
     },
     resolve: {
         extensions: [".tsx", ".ts", ".js"],
@@ -34,16 +39,28 @@ module.exports = {
             {
                 // babel is not needed when using typescript
                 test: /\.tsx?$/,
-                loader: 'ts-loader',
+                use: 'ts-loader',
                 exclude: /node_modules/,
+            },
+            // add createjs to the module system so it can be imported for use
+            {
+                test: /node_modules[/\\]createjs/,
+                use: [{
+                    loader: 'exports-loader',
+                    options: {
+                        type: 'commonjs',
+                        exports: 'single window.createjs',
+                    },
+                }],
             },
             {
                 test: /node_modules[/\\]createjs/,
-                // add createjs to the module system even though it does not support it (can import it)
-                loaders: [
-                    'imports-loader?this=>window',
-                    'exports-loader?window.createjs'
-                ]
+                use: [{
+                    loader: 'imports-loader',
+                    options: {
+                        wrapper: 'window',
+                    },
+                }],
             }
         ]
     },
