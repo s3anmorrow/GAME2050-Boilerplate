@@ -4,17 +4,12 @@
 // importing createjs framework
 import "createjs";
 // importing game constants
-<<<<<<< HEAD
 import { STAGE_WIDTH, STAGE_HEIGHT, FRAME_RATE } from "./Constants";
-=======
-import { STAGE_WIDTH, STAGE_HEIGHT } from "./Constants";
->>>>>>> 95dcef33d1ce31560eb883e6cd1df3dddd5ae1c0
 
 // game variables
 let stage:createjs.StageGL;
 let canvas:HTMLCanvasElement;
 
-<<<<<<< HEAD
 // spritesheet object
 let spriteSheet:createjs.SpriteSheet;
 // spritesheet data object
@@ -207,8 +202,6 @@ function onTick(e:createjs.Event) {
     stage.update();
 }
 
-=======
->>>>>>> 95dcef33d1ce31560eb883e6cd1df3dddd5ae1c0
 // --------------------------------------------------- main method
 function main():void {
     // get reference to canvas
@@ -220,16 +213,11 @@ function main():void {
     // create stage object
     stage = new createjs.StageGL(canvas, { antialias: true });
 
-<<<<<<< HEAD
     // construct Spritesheet object using data - will preload the assets.png
     spriteSheet = new createjs.SpriteSheet(data);
     // wait for spritesheet to fully load before building sprites
     if (spriteSheet.complete == false) spriteSheet.on("complete", onReady, this, true);
     else onReady(null);
-
-=======
->>>>>>> 95dcef33d1ce31560eb883e6cd1df3dddd5ae1c0
-
 }
 
 main();
