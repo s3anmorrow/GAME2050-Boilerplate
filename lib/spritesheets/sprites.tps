@@ -48,9 +48,9 @@
         <key>mipMapMinSize</key>
         <uint>32768</uint>
         <key>etc1QualityLevel</key>
-        <uint>70</uint>
+        <uint>40</uint>
         <key>etc2QualityLevel</key>
-        <uint>70</uint>
+        <uint>40</uint>
         <key>dxtCompressionMode</key>
         <enum type="SettingsBase::DxtCompressionMode">DXT_PERCEPTUAL</enum>
         <key>jxrColorFormat</key>
@@ -185,85 +185,36 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">bug/alive_1.png</key>
-            <key type="filename">bug/alive_10.png</key>
-            <key type="filename">bug/alive_11.png</key>
-            <key type="filename">bug/alive_12.png</key>
-            <key type="filename">bug/alive_13.png</key>
-            <key type="filename">bug/alive_14.png</key>
-            <key type="filename">bug/alive_15.png</key>
-            <key type="filename">bug/alive_16.png</key>
-            <key type="filename">bug/alive_17.png</key>
-            <key type="filename">bug/alive_18.png</key>
-            <key type="filename">bug/alive_19.png</key>
-            <key type="filename">bug/alive_2.png</key>
-            <key type="filename">bug/alive_20.png</key>
-            <key type="filename">bug/alive_21.png</key>
-            <key type="filename">bug/alive_22.png</key>
-            <key type="filename">bug/alive_23.png</key>
-            <key type="filename">bug/alive_24.png</key>
-            <key type="filename">bug/alive_25.png</key>
-            <key type="filename">bug/alive_26.png</key>
-            <key type="filename">bug/alive_3.png</key>
-            <key type="filename">bug/alive_4.png</key>
-            <key type="filename">bug/alive_5.png</key>
-            <key type="filename">bug/alive_6.png</key>
-            <key type="filename">bug/alive_7.png</key>
-            <key type="filename">bug/alive_8.png</key>
-            <key type="filename">bug/alive_9.png</key>
-            <key type="filename">bug/dead_1.png</key>
-            <key type="filename">bug/dead_10.png</key>
-            <key type="filename">bug/dead_11.png</key>
-            <key type="filename">bug/dead_12.png</key>
-            <key type="filename">bug/dead_13.png</key>
-            <key type="filename">bug/dead_14.png</key>
-            <key type="filename">bug/dead_15.png</key>
-            <key type="filename">bug/dead_16.png</key>
-            <key type="filename">bug/dead_17.png</key>
-            <key type="filename">bug/dead_18.png</key>
-            <key type="filename">bug/dead_19.png</key>
-            <key type="filename">bug/dead_2.png</key>
-            <key type="filename">bug/dead_20.png</key>
-            <key type="filename">bug/dead_21.png</key>
-            <key type="filename">bug/dead_22.png</key>
-            <key type="filename">bug/dead_23.png</key>
-            <key type="filename">bug/dead_24.png</key>
-            <key type="filename">bug/dead_25.png</key>
-            <key type="filename">bug/dead_26.png</key>
-            <key type="filename">bug/dead_27.png</key>
-            <key type="filename">bug/dead_28.png</key>
-            <key type="filename">bug/dead_29.png</key>
-            <key type="filename">bug/dead_3.png</key>
-            <key type="filename">bug/dead_30.png</key>
-            <key type="filename">bug/dead_31.png</key>
-            <key type="filename">bug/dead_32.png</key>
-            <key type="filename">bug/dead_33.png</key>
-            <key type="filename">bug/dead_34.png</key>
-            <key type="filename">bug/dead_35.png</key>
-            <key type="filename">bug/dead_36.png</key>
-            <key type="filename">bug/dead_37.png</key>
-            <key type="filename">bug/dead_38.png</key>
-            <key type="filename">bug/dead_39.png</key>
-            <key type="filename">bug/dead_4.png</key>
-            <key type="filename">bug/dead_40.png</key>
-            <key type="filename">bug/dead_41.png</key>
-            <key type="filename">bug/dead_42.png</key>
-            <key type="filename">bug/dead_5.png</key>
-            <key type="filename">bug/dead_6.png</key>
-            <key type="filename">bug/dead_7.png</key>
-            <key type="filename">bug/dead_8.png</key>
-            <key type="filename">bug/dead_9.png</key>
+            <key type="filename">button/down.png</key>
+            <key type="filename">button/over.png</key>
+            <key type="filename">button/up.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0,0</point_f>
                 <key>spriteScale</key>
                 <double>1</double>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>9,9,18,18</rect>
+                <rect>15,15,30,30</rect>
                 <key>scale9Paddings</key>
-                <rect>9,9,18,18</rect>
+                <rect>15,15,30,30</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">other/background.png</key>
+            <key type="filename">other/cloud.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>150,150,300,300</rect>
+                <key>scale9Paddings</key>
+                <rect>150,150,300,300</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -313,23 +264,24 @@
             <key type="filename">plane/dead_9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0,0</point_f>
+                <point_f>0.5,0.5</point_f>
                 <key>spriteScale</key>
                 <double>1</double>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>11,15,21,30</rect>
+                <rect>21,30,42,60</rect>
                 <key>scale9Paddings</key>
-                <rect>11,15,21,30</rect>
+                <rect>21,30,42,60</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
         </map>
         <key>fileList</key>
         <array>
+            <filename>button</filename>
             <filename>plane</filename>
-            <filename>bug</filename>
+            <filename>other</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
