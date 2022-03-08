@@ -7,9 +7,6 @@ import "createjs";
 import { STAGE_WIDTH, STAGE_HEIGHT, FRAME_RATE, ASSET_MANIFEST } from "./Constants";
 import { AssetManager } from "./AssetManager";
 
-// game objects
-let test:createjs.Sprite;
-
 // game variables
 let stage:createjs.StageGL;
 let canvas:HTMLCanvasElement;
@@ -21,12 +18,6 @@ function onReady(e:createjs.Event):void {
 
     // construct game objects here
     // ...
-
-    // this is a temporary sprite test using AssetManager
-    test = assetManager.getSprite("sprites", "plane/alive", 300, 300);
-    test.play();
-    stage.addChild(test);
-    
 
     // startup the ticker
     createjs.Ticker.framerate = FRAME_RATE;
